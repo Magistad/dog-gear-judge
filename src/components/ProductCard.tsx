@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Product } from "@/lib/types";
+import RatingStars from "./RatingStars";
 
 export default function ProductCard({
   product,
@@ -14,6 +15,7 @@ export default function ProductCard({
           {badge}
         </div>
       )}
+
       <div className="relative w-full h-56 rounded-xl overflow-hidden">
         <Image
           src={product.image}
@@ -23,15 +25,18 @@ export default function ProductCard({
           sizes="(max-width: 768px) 100vw, 33vw"
         />
       </div>
+
       <div className="mt-4 space-y-1">
         <h3 className="text-base font-semibold">{product.title}</h3>
         {product.brand && <p className="text-sm text-zinc-500">{product.brand}</p>}
+
         <div className="flex items-center gap-2 text-sm">
-          <span className="font-medium">{product.rating.toFixed(1)}</span>
-          <span className="text-zinc-400">•</span>
+          <RatingStars value={product.rating} />
           <span className="text-zinc-600">{product.reviewCount.toLocaleString()} reviews</span>
         </div>
+
         {product.price && <p className="text-sm font-semibold mt-1">{product.price}</p>}
+
         <Link
           href={product.link}
           target="_blank"
@@ -44,3 +49,4 @@ export default function ProductCard({
     </div>
   );
 }
+

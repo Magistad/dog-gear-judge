@@ -1,58 +1,39 @@
 import type { Product } from "./types";
 
-const TAG = process.env.NEXT_PUBLIC_AFFILIATE_TAG || "";
-
-function withTag(url: string) {
-  if (!TAG) return url;
-  const u = new URL(url);
-  u.searchParams.set("tag", TAG);
-  return u.toString();
-}
-
 export const sampleProducts: Product[] = [
   {
-    asin: "B00HARZC3M",
-    title: "Hands-Free Dog Leash with Shock Absorber",
-    brand: "PawStride",
-    image: "https://images.unsplash.com/photo-1534361960057-19889db9621e?q=80&w=1200&auto=format&fit=crop",
-    link: withTag("https://www.amazon.com/dp/B00HARZC3M"),
-    rating: 4.4,
-    reviewCount: 214,
-    price: "$27.99",
-    category: "leashes",
-  },
-  {
-    asin: "B08K9QN1V7",
-    title: "No-Pull Harness (Reflective, Adjustable)",
-    brand: "TrailHound",
-    image: "https://images.unsplash.com/photo-1558944351-cf1f1a6a57f8?q=80&w=1200&auto=format&fit=crop",
-    link: withTag("https://www.amazon.com/dp/B08K9QN1V7"),
-    rating: 4.7,
-    reviewCount: 1860,
-    price: "$32.95",
+    asin: "rabbitgoo-harness",
+    title: "Rabbitgoo No-Pull Dog Harness",
+    brand: "Rabbitgoo",
+    image: "https://m.media-amazon.com/images/I/71eROBTwkVL.__AC_SX300_SY300_QL70_ML2_.jpg",
+    link: "https://amzn.to/4nGFJ0B",
+    rating: 4.6,
+    reviewCount: 128000,
+    price: "$21.99",
     category: "harnesses",
   },
   {
-    asin: "B07Y2N6YWB",
-    title: "Collapsible Travel Bowl (2-Pack)",
-    brand: "RoamRover",
-    image: "/luna.png",
-    link: withTag("https://www.amazon.com/dp/B07Y2N6YWB"),
-    rating: 4.2,
-    reviewCount: 98,
-    price: "$12.49",
-    category: "bowls",
+    asin: "tug-leash",
+    title: "TUG 360° Tangle-Free Retractable Dog Leash (Medium)",
+    brand: "TUG",
+    image: "https://m.media-amazon.com/images/I/819AR4awlfL.__AC_SY300_SX300_QL70_ML2_.jpg",
+    link: "https://amzn.to/4ncOrnn",
+    rating: 4.5,
+    reviewCount: 74000,
+    price: "$16.99",
+    category: "leashes",
   },
   {
-    asin: "B0BHC4XK1S",
-    title: "LED Safety Collar (USB Rechargeable)",
-    brand: "GlowPup",
-    image: "https://images.unsplash.com/photo-1518020382113-a7e8fc38eac9?q=80&w=1200&auto=format&fit=crop",
-    link: withTag("https://www.amazon.com/dp/B0BHC4XK1S"),
-    rating: 4.5,
-    reviewCount: 640,
-    price: "$18.99",
-    category: "collars",
+    asin: "slson-bowl",
+    title: "SLSON Collapsible Dog Bowl (2-Pack) with Lids",
+    brand: "SLSON",
+    image: "https://m.media-amazon.com/images/I/61nEhxEELuL.__AC_SX300_SY300_QL70_ML2_.jpg",
+    link: "https://amzn.to/4nLZ2Ww",
+    rating: 4.7,
+    reviewCount: 21000,
+    price: "$9.99",
+    category: "bowls",
   },
 ];
+
 
