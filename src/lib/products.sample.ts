@@ -19,6 +19,7 @@ export const sampleProducts: Product[] = [
     rating: 4.4,
     reviewCount: 214,
     price: "$27.99",
+    category: "leashes",
   },
   {
     asin: "B08K9QN1V7",
@@ -29,16 +30,18 @@ export const sampleProducts: Product[] = [
     rating: 4.7,
     reviewCount: 1860,
     price: "$32.95",
+    category: "harnesses",
   },
   {
     asin: "B07Y2N6YWB",
     title: "Collapsible Travel Bowl (2-Pack)",
     brand: "RoamRover",
-    image: "https://images.unsplash.com/photo-1558944352-5935b59f82bc?q=80&w=1200&auto=format&fit=crop",
+    image: "/luna.png",
     link: withTag("https://www.amazon.com/dp/B07Y2N6YWB"),
     rating: 4.2,
     reviewCount: 98,
     price: "$12.49",
+    category: "bowls",
   },
   {
     asin: "B0BHC4XK1S",
@@ -49,5 +52,7 @@ export const sampleProducts: Product[] = [
     rating: 4.5,
     reviewCount: 640,
     price: "$18.99",
+    category: "collars",
   },
 ];
+

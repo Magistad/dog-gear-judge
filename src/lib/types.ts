@@ -1,10 +1,12 @@
 export type Product = {
-  asin: string;              // Amazon ASIN
+  asin: string;
   title: string;
   brand?: string;
-  image: string;             // absolute URL
-  link: string;              // product URL (with tag later)
-  rating: number;            // 0..5
-  reviewCount: number;       // integer
-  price?: string;            // display price e.g. "$29.99"
+  image: string;
+  link: string;
+  rating: number;       // 0..5
+  reviewCount: number;  // integer
+  price?: string;
+  category?: string;    // e.g. "harnesses", "leashes", "bowls"
 };
+
